@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_ayat_id: 1
+  end_ayat_id: 1
+  start_reading: 2013-08-02 08:30:13
+  end_reading: 2013-08-02 08:30:13
+  duration: 1
+
+two:
+  start_ayat_id: 1
+  end_ayat_id: 1
+  start_reading: 2013-08-02 08:30:13
+  end_reading: 2013-08-02 08:30:13
+  duration: 1

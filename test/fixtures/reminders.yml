@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_ayat_id: 1
+  start_at: 2013-08-02 09:10:55
+  remind_every: 1
+  remind_before: 1
+
+two:
+  start_ayat_id: 1
+  start_at: 2013-08-02 09:10:55
+  remind_every: 1
+  remind_before: 1

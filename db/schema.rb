@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130731081916) do
+ActiveRecord::Schema.define(:version => 20130802021055) do
+
+  create_table "ayats", :force => true do |t|
+    t.integer  "number"
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "surats_id"
+  end
 
   create_table "juzs", :force => true do |t|
     t.integer  "number"
@@ -19,11 +27,35 @@ ActiveRecord::Schema.define(:version => 20130731081916) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "reading_histories", :force => true do |t|
+    t.integer  "start_ayat_id"
+    t.integer  "end_ayat_id"
+    t.datetime "start_reading"
+    t.datetime "end_reading"
+    t.integer  "duration"
+    t.integer  "user_id",       :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "reminders", :force => true do |t|
+    t.integer  "start_ayat_id"
+    t.datetime "start_at"
+    t.integer  "remind_every"
+    t.integer  "remind_before"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "surats", :force => true do |t|
     t.string   "title"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "slug"
+    t.integer  "juzs_id"
   end
+
+  add_index "surats", ["slug"], :name => "index_surats_on_slug", :unique => true
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
