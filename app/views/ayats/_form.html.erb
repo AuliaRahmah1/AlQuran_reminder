@@ -1,0 +1,29 @@
+<% if @ayat.errors.present? %>
+	<ul>
+		<% @ayat.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @ayat do |f| %>
+	<table>
+		<tr>
+			<td>Number</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.text_field :number %></td>
+		</tr>
+
+		<tr>
+			<td>Message</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.text_field :message %></td>
+		</tr>
+		<tr>
+			<td colspan='3'><%= f.submit %>
+		</tr>
+
+	</table>
+<% end %>

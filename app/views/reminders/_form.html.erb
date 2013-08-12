@@ -1,0 +1,43 @@
+<% if @reminder.errors.present? %>
+	<ul>
+		<% @reminder.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for @reminder do |f| %>
+	<table>
+		<tr>
+			<td>Start_ayat</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.text_field :start_ayat %></td>
+		</tr>
+
+		<tr>
+			<td>Start_at</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.text_field :start_at %></td>
+		</tr>
+
+		<tr>
+			<td>Reminder_every</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.text_field :remind_every %></td>
+		</tr>
+
+		<tr>
+			<td>Reminder_before</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.text_field :remind_before %></td>
+		</tr>
+		<tr>
+			<td colspan='3'><%= f.submit %>
+		</tr>
+
+	</table>
+<% end %>

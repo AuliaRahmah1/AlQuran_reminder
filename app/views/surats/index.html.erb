@@ -1,0 +1,16 @@
+<h1>List All Surats</h1>
+<ul>
+	<% @surats.each do |surat| %>
+	 <li>
+	 	<%= link_to surat.title, surat_path(surat) %>
+
+	 	<%= link_to 'Edit', edit_surat_path(surat) %> |
+	 	<%= link_to 'Delete', surat_path(surat), method: :delete %> 
+
+	 </li>
+	<% end %>
+</ul>
+
+<br/>
+
+<%= link_to 'New Surat', new_surat_path %>

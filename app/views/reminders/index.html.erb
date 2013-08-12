@@ -1,0 +1,16 @@
+<h1>List All Reminders</h1>
+<ul>
+	<% @reminders.each do |reminder| %>
+	 <li>
+	 	<%= link_to reminder.start_ayat, reminder_path(reminder) %>
+
+	 	<%= link_to 'Edit', edit_reminder_path(reminder) %> |
+	 	<%= link_to 'Delete', reminder_path(reminder), method: :delete %> 
+
+	 </li>
+	<% end %>
+</ul>
+
+<br/>
+
+<%= link_to 'New Reminder', new_reminder_path %>
