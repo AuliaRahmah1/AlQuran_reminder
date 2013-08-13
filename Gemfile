@@ -23,6 +23,7 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'friendly_id'
+gem 'bootstrap-sass', '~> 2.3.2.0'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -1,0 +1,62 @@
+	
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+ <%= devise_error_messages! %>
+<div></br>
+	<table style="float:left">
+		<tr>
+			<td>
+				<input type="email" class="form-control" placeholder="Email">
+			</td>
+			<td>
+				<input type="password" class="form-control" placeholder="Password">
+			</td>
+			<td>
+				<button type="button" class="btn btn-primary">Sign In</button>
+			</td>
+		</tr>
+	</table>
+	<h1 class="textkanan">Quran</h1>
+	
+  
+	
+</div>
+
+<div style="clear:both"></div>
+
+<div class="kanan">
+
+
+  <div>
+  	<p>New To Quran? Sign Up Here..</p>
+  	<input type="text" class="form-control" placeholder="First name">
+  </div>
+
+  <div>
+   	<input type="text" class="form-control" placeholder="Last name">
+  </div>
+
+  <div>
+  	<input type="email" class="form-control" placeholder="Email">
+  </div>
+
+  <div>
+  	<input type="password" class="form-control" placeholder="Password">
+  </div>
+
+  <div>
+  	<input type="password" class="form-control" placeholder="Password confirmation">
+ </div></br>
+
+  <div>
+  	<button type="button" class="btn btn-primary">Sign Up</button>
+  </div>
+
+  <%= render "devise/shared/links" %>
+</div>
+<% end %>
+
+
+
+
+
+
