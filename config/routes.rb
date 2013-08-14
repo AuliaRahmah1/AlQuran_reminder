@@ -9,5 +9,6 @@ AlQuranReminder::Application.routes.draw do
   resources :ayats
   resources :reading_histories
   resources :reminders
+  resources :mains
   
 end

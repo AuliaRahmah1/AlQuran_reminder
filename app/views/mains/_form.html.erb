@@ -1,0 +1,40 @@
+<div id="banner">
+	<%= image_tag '/assets/yu.png' %>
+</div>
+<div>
+		<td>
+			<div class="topbody">
+				<button class="btn btn-default btn-primary menu-button marginbt"> Audio</button>
+				<button class="btn btn-default btn-primary menu-button"> Reminder</button>
+				<button class="btn btn-default btn-primary menu-button"> My Reading History</button>
+				<button class="btn btn-default btn-primary menu-button"> About</button>
+				<button class="btn btn-default btn-primary menu-button"> Sign Out</button>
+				
+				<div class="input-append textkanan">
+ 					<input type="text" class="search-query" placeholder="Search">
+				</div>		
+			</div>
+		</td>
+	<div></br>
+		<p class="colr">Surah/Chapter</p>
+			<select multiple="multiple">
+				<% @surats.each do |surat| %>
+					<option value="<%= surat.id%>"><%= surat.title %></option>
+				<% end %>
+			</select>
+			<div class="body">
+
+			</div>	
+	</div>
+
+	<div></br>
+		<p class="colr">Language</p>
+			<select multiple="multiple">
+			  <option>English</option>
+			  <option>Indonesian</option>
+			  <option>Malaysia</option>
+			</select>
+	</div>
+
+	
+</div>

@@ -2,4 +2,6 @@
  *= require bootstrap
  *= require bootstrap-responsive
  *= require registrations
+ *= require global
+ *= require banner
  */

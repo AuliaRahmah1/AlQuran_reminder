@@ -1,17 +1,76 @@
-<%= form_tag home_index_path do %>
-<table>
-	<tr>
-		<td>A</td>
-		<td>:</td>
-		<td><%= text_field_tag :a %></td>
-	</tr>
-	<tr>
-		<td>B</td>
-		<td>:</td>
-		<td><%= text_field_tag :a %></td>
-	</tr>
-	<tr>
-		<td colspan='3'><%= submit_tag 'jumlah' %></td>
-	</tr>
-</table>
+
+<div>
+	</br>
+	<%= form_for(User.new, :as => 'user', :url => session_path('user')) do |f| %>
+	<table style="float:left">
+		<tr>
+			<td></br>
+				<%= f.email_field :email, :autofocus => true, class: "form-control", placeholder: "Email", style: 'margin-bottom:0px' %>
+				
+					<div class="checkbox">
+			
+					<label>
+						<input type="checkbox"> Remember me
+     		  </label>
+     		  </div>
+					
+			</td>
+			<td></br>
+				<%= f.password_field :password, 
+					class: "form-control", placeholder: "Password", style: 'margin-bottom:24px;' %>
+			</td>
+			<td>
+				<%= f.submit "Sign in", class: 'btn btn-primary' %>
+			</td>
+		</tr>
+	</table>
+	<h1 class="textkanan">Quran</h1>
+  
+	<% end %>
+</div>
+
+<div style="clear:both"></div>
+
+<div class="kanan">
+
+
+  <div>
+  	<h2>Sign up</h2>
+		<%= form_for(User.new, :as => 'user', :url => registration_path('user')) do |f| %>
+  	<p>New To Quran? Sign Up Here..</p>
+  	
+  </div>
+
+  <div>
+    <%= f.text_field :first_name, :autofocus => true, placeholder: 'first name' %>
+  </div>
+
+  <div>
+   	<%= f.text_field :last_name, placeholder: 'last name' %>
+  </div>
+
+  <div>
+  	<%= f.email_field :email, placeholder: 'email' %> 
+  </div>
+
+  <div>
+  	 <%= f.password_field :password, placeholder: 'password' %>
+  </div>
+
+  <div>
+  	<%= f.password_field :password_confirmation, placeholder: 'password_confirmation' %> 
+
+ </div></br>
+
+  <div>
+  	<%= f.submit "Sign up", class: 'btn btn-primary' %>
+  </div>
+ <% end %>
+
+<% if user_signed_in? %>
+	<%= render "login_links", resource: current_user, 
+			resource_name: current_user.class.name.downcase, devise_mapping: Devise.mappings[:user] %>
+<% else %>
+	<%= render "login_links", 
+	    resource: User.new, resource_name: 'user', devise_mapping: Devise.mappings[:user] %>
 <% end %>

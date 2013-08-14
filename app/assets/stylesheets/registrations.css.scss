@@ -1,6 +1,46 @@
 .kanan{ height:100px; padding:10px;float:right;width:250px; margin-top:10px; 
 }
-
-h1.textkanan{
+.textkanan{
+	margin-right: 40px;
 	float:right;
+}
+.kiri{
+	float:left;
+	bottom:10px;
+}
+.margincb{
+	margin: 0px;
+}
+
+.topbody{
+	border: 2px;
+	border-radius: 0px 0px 50px 50px;
+	width: 940px;
+	height: 30px;
+	background-color: grey;
+	margin-top: 0px;
+
+	padding: 10px 0px;
+
+}
+
+.menu-button {
+	margin:0px 3px;
+}
+
+.colr{
+
+	color: red;
+}
+
+.marginbt{
+	margin-left: 40px;
+}
+.body{
+	float: right;
+	border: 2px;
+	width: 720px;
+	height: 700px;
+	background-color: white;
+	
 }
