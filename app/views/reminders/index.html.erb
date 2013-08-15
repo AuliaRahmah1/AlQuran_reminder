@@ -1,16 +1,41 @@
-<h1>List All Reminders</h1>
-<ul>
-	<% @reminders.each do |reminder| %>
-	 <li>
-	 	<%= link_to reminder.start_ayat, reminder_path(reminder) %>
+<div class="row-fluid">
+	<div id="banner">
+		<div class="reminder">
+				<h2>Create Your Own Reminders Quran</h2>
+				<h4>Setting Reminders</h4>
+				<div>
+					<form class="form-horizontal">
+						 <div class="control-group">
+						    <label class="control-label" for="inputTime"> Time</label>
+							    <div class="controls">
+							      <input type="text" id="inputTime" placeholder="Time">
+							    </div>
+							    <label class="control-label" for="inputRepeat"> Repeat</label>
+							    <div class="controls">
+							      <input type="text" id="inputRepeat" placeholder="Repeat">
+							    </div>
+							    <label class="control-label" for="inputMessage"> Message</label>
+								    <div class="controls">
+								      <input type="text" id="inputMessage" placeholder="Message">
+								    </div></br>
+								  <center><button class="btn btn-primary" type="button">OK</button></center>
+						  </div>
+					
+				</div>
+				<ul>
+					<% @reminders.each do |reminder| %>
+					 <li>
+					 	<%= link_to reminder, reminder_path(reminder) %>
 
-	 	<%= link_to 'Edit', edit_reminder_path(reminder) %> |
-	 	<%= link_to 'Delete', reminder_path(reminder), method: :delete %> 
+					 	<%= link_to 'Edit', edit_reminder_path(reminder) %> |
+					 	<%= link_to 'Delete', reminder_path(reminder), method: :delete %> 
 
-	 </li>
-	<% end %>
-</ul>
+					 </li>
+					<% end %>
+				</ul>
 
-<br/>
-
-<%= link_to 'New Reminder', new_reminder_path %>
+				<br/>
+				<%= link_to 'New Reminder', new_reminder_path %>
+		</div>
+	</div>
+</div>

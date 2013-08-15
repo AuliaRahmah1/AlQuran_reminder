@@ -1,8 +1,10 @@
-.kanan{ height:100px; padding:10px;float:right;width:250px; margin-top:10px; 
+.kanan{ 
+	height:100px; padding:10px;float:right;width:250px; margin-top:10px; 
 }
 .textkanan{
-	margin-right: 40px;
+	margin-right: 80px;
 	float:right;
+	font-size: 80px;
 }
 .kiri{
 	float:left;
@@ -14,12 +16,10 @@
 
 .topbody{
 	border: 2px;
-	border-radius: 0px 0px 50px 50px;
-	width: 940px;
+	
 	height: 30px;
 	background-color: grey;
 	margin-top: 0px;
-
 	padding: 10px 0px;
 
 }
@@ -29,18 +29,45 @@
 }
 
 .colr{
-
 	color: red;
+}
+
+.color-log{
+	color: white;
+	font-style: bold;
 }
 
 .marginbt{
 	margin-left: 40px;
 }
 .body{
-	float: right;
 	border: 2px;
-	width: 720px;
-	height: 700px;
 	background-color: white;
-	
+	margin: 30px 0px 0px 0px;
+}
+
+.leftpic{
+	float:left;
+	width: 50px 20px 20px 20px;
+	height: 50px;
+	margin: 0px 0px 30px 0px;
+	img {
+		width: 600px;
+	}
+}
+.leftpicsur{
+	margin: 30px 0px 0px 0px;
+
+	img{
+		width: 200px;
+		height: 500px;
+		
+	}
+}
+.reminder{
+	border:2px solid black;
+	background-color: white;
+	margin: 20px 100px 20px 100px;
+	padding: 20px;
+
 }

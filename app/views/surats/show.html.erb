@@ -1,4 +1,22 @@
-<h1><%= @surat.title %></h1>
+<div class='row-fluid'>
+	<div class='span3'>
+			<div class="leftpicsur">
+		<%= image_tag '/assets/images.jpg' %>
+	</div>
+	</div>
+	
+	<div class='span9'>
+		<div class='body'>
+			<h1><%= @surat.title %></h1>
+			<ul>
+				<% @ayats.each do |ayat| %>
+					<li><%= ayat.message %></li>
+				<% end %>
+			</ul>
+			
+		</div>
+	</div>
 
-<p></p>
-<%= link_to 'Edit', edit_surat_path(@surat) %>
+</div>
+
+

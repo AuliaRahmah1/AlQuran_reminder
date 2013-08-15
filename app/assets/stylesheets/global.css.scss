@@ -1,3 +1,33 @@
 body{
 	background-image:image-url("/assets/Batik.jpg");
 }
+
+.left-side {
+	float: left;
+}
+.right-side {
+	float: right;
+}
+.clearer {
+	clear:both;
+}
+
+.top-10px {
+	display: block;
+	height: 10px;
+}
+
+.surah-container {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: #fff;
+
+	ul {
+		// reset default margin
+		margin: 10px; 
+		li {
+			// menghilangkan titik di sebelah kiri
+			list-style-type: none;
+		}
+	}
+}

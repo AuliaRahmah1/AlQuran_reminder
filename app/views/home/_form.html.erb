@@ -8,10 +8,11 @@
 				<%= f.email_field :email, :autofocus => true, class: "form-control", placeholder: "Email", style: 'margin-bottom:0px' %>
 				
 					<div class="checkbox">
-			
-					<label>
-						<input type="checkbox"> Remember me
-     		  </label>
+						<label>
+							<div class="color-log">
+								<input type="checkbox"> Remember me
+	     		  	</div>
+	     		  </label>
      		  </div>
 					
 			</td>
@@ -24,21 +25,33 @@
 			</td>
 		</tr>
 	</table>
-	<h1 class="textkanan">Quran</h1>
-  
+	<div class'clear:both'></div>
+	
+
+	
+	<div class="color-log">
+		<h1 class="textkanan">Qur'an</h1>
+  </div>
 	<% end %>
+		
 </div>
+
 
 <div style="clear:both"></div>
 
+	<div class="leftpic">
+				<%= image_tag '/assets/images.jpg' %>
+	</div>
+
 <div class="kanan">
-
-
   <div>
-  	<h2>Sign up</h2>
-		<%= form_for(User.new, :as => 'user', :url => registration_path('user')) do |f| %>
-  	<p>New To Quran? Sign Up Here..</p>
-  	
+  	<div class="color-log">
+  		<h2>Sign up</h2>
+  	</div>
+			<%= form_for(User.new, :as => 'user', :url => registration_path('user')) do |f| %>
+  	<div class="color-log">
+  		<p>New To Quran? Sign Up Here..</p>
+  	</div>
   </div>
 
   <div>

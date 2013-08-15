@@ -4,6 +4,7 @@ class SuratsController < ApplicationController
 	end
 	def show
 		@surat = Surat.find(params[:id])
+		@ayats = @surat.ayats
 	end
 	def new
 	 @surat = Surat.new

@@ -1,40 +1,27 @@
-<div id="banner">
-	<%= image_tag '/assets/yu.png' %>
-</div>
-<div>
-		<td>
-			<div class="topbody">
-				<button class="btn btn-default btn-primary menu-button marginbt"> Audio</button>
-				<button class="btn btn-default btn-primary menu-button"> Reminder</button>
-				<button class="btn btn-default btn-primary menu-button"> My Reading History</button>
-				<button class="btn btn-default btn-primary menu-button"> About</button>
-				<button class="btn btn-default btn-primary menu-button"> Sign Out</button>
-				
-				<div class="input-append textkanan">
- 					<input type="text" class="search-query" placeholder="Search">
-				</div>		
-			</div>
-		</td>
-	<div></br>
+<div class='top-10px'></div>
+<div class='top-10px'></div>
+<div class='row-fluid'>
+	<div class='span3'>
 		<p class="colr">Surah/Chapter</p>
-			<select multiple="multiple">
+		<div class='surah-container'>
+			<ul>
+				<li><%= link_to 'All Chapters', mains_path %></li>
 				<% @surats.each do |surat| %>
-					<option value="<%= surat.id%>"><%= surat.title %></option>
+					<li><%= link_to surat.title, surat_path(surat) %></li>
 				<% end %>
-			</select>
-			<div class="body">
-
-			</div>	
+			</ul>
+		</div>
 	</div>
 
-	<div></br>
-		<p class="colr">Language</p>
-			<select multiple="multiple">
-			  <option>English</option>
-			  <option>Indonesian</option>
-			  <option>Malaysia</option>
-			</select>
+	<div class='span9'>
+		<div class="body">
+		<ul>
+				<% @surats.each do |surat| %>
+					<li><%= link_to surat.title, surat_path(surat) %></li>
+				<% end %>
+			</ul>
+		</div>
 	</div>
 
-	
 </div>
+
