@@ -21,6 +21,14 @@
 			<td></td>
 			<td><%= f.text_field :message %></td>
 		</tr>
+
+		<tr>
+			<td>Surat</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.collection_select :surats_id, Surat.all, :id, :title %></td>
+		</tr>
+
 		<tr>
 			<td>Mp3file</td>
 			<td>:</td>
@@ -28,8 +36,15 @@
 			<td><%= f.file_field :mp3file %></td>
 		</tr>
 		<tr>
+			<td>Image</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.file_field :image %></td>
+		</tr>
+		<tr>
 			<td colspan='3'><%= f.submit %>
 		</tr>
+
 
 	</table>
 <% end %>

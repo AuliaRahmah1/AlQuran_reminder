@@ -5,7 +5,8 @@ class User < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
-  devise :database_authenticatable, :registerable, :confirmable, 
+  devise :database_authenticatable, :registerable, 
+         :confirmable, 
          #:lockable,
          :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
   attr_accessible :email, :password, :password_confirmation, :first_name, :last_name

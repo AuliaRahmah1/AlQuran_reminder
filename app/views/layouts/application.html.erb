@@ -8,8 +8,11 @@
 </head>
 <body class="<%= controller_name%>">
 	<div class='container'>
+		<%= render 'layouts/alert' %>
 		<%= render 'layouts/banner' %>
+		
 		<%= yield %>
+
 	</div>
 </body>
 </html>

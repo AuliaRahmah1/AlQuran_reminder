@@ -1,22 +1,22 @@
 <div class='row-fluid'>
 	<div class='span3'>
-			<div class="leftpicsur">
-		<%= image_tag '/assets/images.jpg' %>
+			<div class='leftpicsur'>
+				<%= image_tag '/assets/images.jpg' %>
+			</div>
 	</div>
-	</div>
-	
 	<div class='span9'>
 		<div class='body'>
 			<h1><%= @surat.title %></h1>
-			<ul>
-				<% @ayats.each do |ayat| %>
-					<li><%= ayat.message %></li>
+						<% @ayats.each do |ayat| %>
+						<%= image_tag ayat.image_url %>	
+					<div class='margintext' >
+						<%= ayat.message %>
+					</div>
+					<div class='clearer'></div>
 				<% end %>
-			</ul>
-			
+						
 		</div>
 	</div>
-
 </div>
 
 

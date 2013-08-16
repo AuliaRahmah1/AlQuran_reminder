@@ -40,3 +40,6 @@ gem 'carrierwave'
 # To use debugger
 # gem 'debugger'
 
+group :development do 
+  gem 'mailcatcher'  
+end

@@ -4,7 +4,6 @@ class AyatsController < ApplicationController
 	end
 	def show
 		@ayat = Ayat.find(params[:id])
-		@surat = @ayat.surats
 	end
 	def new
 		@ayat = Ayat.new	
