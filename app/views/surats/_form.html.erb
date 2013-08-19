@@ -6,13 +6,20 @@
 	</ul>
 <% end %>
 
-<%= form_for @surat do |f| %>
+<%= form_for @surat, html: { multipart: true } do |f| %>
 	<table>
 		<tr>
 			<td>Title</td>
 			<td>:</td>
 			<td></td>
 			<td><%= f.text_field :title %></td>
+		</tr>
+
+		tr>
+			<td>Title</td>
+			<td>:</td>
+			<td></td>
+			<td><%= f.file_field :mp3file %></td>
 		</tr>
 
 		<tr>

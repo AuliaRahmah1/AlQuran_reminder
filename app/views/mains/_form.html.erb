@@ -15,13 +15,14 @@
 
 	<div class='span9'>
 		<div class="body">
-		<ul>
-				<% @surats.each do |surat| %>
-					<li><%= link_to surat.title, surat_path(surat) %></li>
-				<% end %>
-			</ul>
+			<ol>
+					<% @surats.each do |surat| %>
+						<li>
+							<%= link_to surat.title, surat_path(surat) %>
+						</li>
+					<% end %>
+			</ol>
 		</div>
 	</div>
-
 </div>
 

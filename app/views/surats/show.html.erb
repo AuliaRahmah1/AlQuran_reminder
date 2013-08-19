@@ -6,6 +6,13 @@
 	</div>
 	<div class='span9'>
 		<div class='body'>
+			<% if @surat.mp3file.present? %>
+				<div>
+					<audio controls>
+					 <source src="<%= @surat.mp3file_url %>" type="audio/ogg">
+					</audio>
+				</div>
+			<% end %>
 			<h1><%= @surat.title %></h1>
 						<% @ayats.each do |ayat| %>
 						<%= image_tag ayat.image_url %>	
@@ -14,7 +21,6 @@
 					</div>
 					<div class='clearer'></div>
 				<% end %>
-						
 		</div>
 	</div>
 </div>

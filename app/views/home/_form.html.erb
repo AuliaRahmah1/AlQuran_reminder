@@ -1,66 +1,54 @@
-<% if !user_signed_in? %>
-<div>
-	</br>
-	<%= form_for(User.new, :as => 'user', :url => session_path('user')) do |f| %>
-
-	
-
-	
-	<div class="color-log">
-		<h1 class="textkanan">Qur'an</h1>
+<div style='overflow: hidden'>
+  <div class="color-log">
+    <h1 class="textkanan">Qur'an</h1>
   </div>
-	<% end %>
 </div>
-<% end %>
-
 
 <div style="clear:both"></div>
 
-	<div class="leftpic">
-				<%= image_tag '/assets/images.jpg' %>
-	</div>
-
+  <%= render 'layouts/carousel' %>
 <div class="kanan">
   <div>
-  	<div class="color-log">
-  		<h2>Sign up</h2>
-  	</div>
-			<%= form_for(User.new, :as => 'user', :url => registration_path('user')) do |f| %>
-  	<div class="color-log">
-  		<p>New To Quran? Sign Up Here..</p>
-  	</div>
+    <div class="color-log">
+      <h2>Sign up</h2>
+    </div>
+      <%= form_for(User.new, :as => 'user', :url => registration_path('user')) do |f| %>
+      <div class="color-log">
+        <p>New To Quran? Sign Up Here..</p>
+      </div>
   </div>
 
-  <div>
-    <%= f.text_field :first_name, placeholder: 'first name' %>
-  </div>
+    <div>
+      <%= f.text_field :first_name, placeholder: 'first name' %>
+    </div>
 
-  <div>
-   	<%= f.text_field :last_name, placeholder: 'last name' %>
-  </div>
+    <div>
+      <%= f.text_field :last_name, placeholder: 'last name' %>
+    </div>
 
-  <div>
-  	<%= f.email_field :email, placeholder: 'email' %> 
-  </div>
+    <div>
+      <%= f.email_field :email, placeholder: 'email' %> 
+    </div>
 
-  <div>
-  	 <%= f.password_field :password, placeholder: 'password' %>
-  </div>
+    <div>
+      <%= f.password_field :password, placeholder: 'password' %>
+    </div>
 
-  <div>
-  	<%= f.password_field :password_confirmation, placeholder: 'password_confirmation' %> 
+    <div>
+      <%= f.password_field :password_confirmation, placeholder: 'password_confirmation' %>
+    </div></br>
 
- </div></br>
-
-  <div>
-  	<%= f.submit "Sign up", class: 'btn btn-primary' %>
-  </div>
+    <div>
+      <%= f.submit "Sign up", class: 'btn btn-primary' %>
+    </div>
  <% end %>
 
 <% if user_signed_in? %>
-	<%= render "login_links", resource: current_user, 
-			resource_name: current_user.class.name.downcase, devise_mapping: Devise.mappings[:user] %>
+  <%= render "login_links", resource: current_user, 
+      resource_name: current_user.class.name.downcase, devise_mapping: Devise.mappings[:user] %>
 <% else %>
-	<%= render "login_links", 
-	    resource: User.new, resource_name: 'user', devise_mapping: Devise.mappings[:user] %>
+  <%= render "login_links", 
+      resource: User.new, resource_name: 'user', devise_mapping: Devise.mappings[:user] %>
 <% end %>
+
+

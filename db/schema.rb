@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130816043343) do
+ActiveRecord::Schema.define(:version => 20130819082320) do
 
   create_table "ayats", :force => true do |t|
     t.integer  "number"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20130816043343) do
     t.datetime "updated_at", :null => false
     t.string   "slug"
     t.integer  "juzs_id"
+    t.string   "mp3file"
   end
 
   add_index "surats", ["slug"], :name => "index_surats_on_slug", :unique => true
