@@ -1,0 +1,26 @@
+window.reminders=[];
+<% @reminders.each do |reminder| %>
+	window.reminders.push({ id: <%= reminder.id %>, start_at: new Date('<%= reminder.start_at %>'),
+		show: <%= reminder.dismiss.presence || false %>,
+		surat: "<%= reminder.surat.title %>",
+		ayat: "<%= reminder.ayat.message %>"
+});
+<% end %>
+
+setInterval(function(){
+	window.reminders.forEach(function(e, i){
+		if(e.show === false){
+			
+			if(e.start_at < new Date()){
+				e.show = true;
+
+				var element = $("<marquee></marquee>");
+				element.append('Its time for reading' + e.surat + ' ' +e.ayat);
+				element.append($("<a href='/reminders/" + e.id + "?reminder[dismiss]=true' data-method='put'>Dismiss</a>"));
+				
+			
+				$("#reminders-container").append(element);
+			}
+		}
+	});
+}, 1000);

@@ -1,44 +1,35 @@
 <div class="row-fluid">
 	<div id="banner">
 		<div class="reminder">
-				<h2>Create Your Own Reminders Quran</h2>
-				<h4>Setting Reminders</h4>
-				<div>
-					<form class="form-horizontal">
-						 <div class="control-group">
-						    <label class="control-label" for="inputTime"> Time</label>
-							    <div class="controls">
-							      <input type="text" id="inputTime" placeholder="Time">
-							    </div></br>
 
-							    <label class="control-label" for="inputRepeat"> Repeat</label>
-							    <div class="controls">
-							      <input type="text" id="inputRepeat" placeholder="Repeat">
-							    </div></br>
+				<% if @reminders.blank? %>
+					<h2>
+						You don't have any reminder, do you want to create
+						<%= link_to 'New Reminder ?', new_reminder_path, class: 'btn btn-primary' %>
+						
+					</h2>
+				<% else %>
 
-							    <label class="control-label" for="inputMessage"> Message</label>
-								    <div class="controls">
-								      <input type="text" id="inputMessage" placeholder="Message">
-								    </div></br>
+					<h2>Your reminder Lists</h2>
+					<ul>
+						<% @reminders.each do |reminder| %>
+						<li>
+							<span>Reading surat <%= link_to reminder.surat.title, surat_path(reminder.surat) %></span>
+							<span>ayat <%= link_to reminder.ayat.message, ayat_path(reminder.ayat) %></span>
+							<span>at <%= reminder.start_at.strftime('%d-%B-%Y %H:%M %p') %></span>
 
-								  <center><button class="btn btn-primary" type="button">OK</button></center>
-						  </div>
-					
-				</div>
-				<ul>
-					<% @reminders.each do |reminder| %>
-					 <li>
-					 	<%= link_to reminder, reminder_path(reminder) %>
+							<span>
+								<%= link_to 'Edit', edit_reminder_path(reminder), class: 'btn btn-warning' %>
 
-					 	<%= link_to 'Edit', edit_reminder_path(reminder) %> |
-					 	<%= link_to 'Delete', reminder_path(reminder), method: :delete %> 
+								<%= link_to 'Remove', reminder_path(reminder), class: 'btn btn-danger', method: :delete %>
+							</span>
+						</li>
+						<% end %>					
+					</ul>
+					<%= link_to 'New Reminder', new_reminder_path, class: 'btn btn-primary' %>
+				<% end %>
 
-					 </li>
-					<% end %>
-				</ul>
-
-				<br/>
-				<%= link_to 'New Reminder', new_reminder_path %>
+				
 		</div>
 	</div>
 </div>

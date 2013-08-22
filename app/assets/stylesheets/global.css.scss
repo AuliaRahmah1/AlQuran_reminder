@@ -1,5 +1,5 @@
 body{
-	background-image:image-url("/assets/Batik.jpg");
+	background-image:image-url("/assets/fa.jpg");
 }
 
 .left-side {
@@ -30,4 +30,10 @@ body{
 			list-style-type: none;
 		}
 	}
+}
+
+#reminders-container{
+	background-color: #fff;
+	margin: 30px 0px;
+	padding: 20px;
 }

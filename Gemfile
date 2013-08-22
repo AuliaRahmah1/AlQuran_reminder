@@ -42,5 +42,6 @@ gem 'yaml_db'
 # gem 'debugger'
 
 group :development do 
-  gem 'mailcatcher'  
+  gem 'mailcatcher' 
+  gem 'pry-rails' 
 end

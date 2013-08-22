@@ -6,26 +6,25 @@
 				<%= image_tag '/assets/yu.png' %>
 
 					<div class="topbody">
-						<button class="btn btn-default btn-link menu-button"> <a href="/home" style="color:white;">Home</a></button>
-
-						<button class="btn btn-default btn-primary menu-button marginbt"> Audio</button>
-						
-						<button class="btn btn-default btn-primary menu-button"> <a href="/reminders" style="color:white;">Reminder</a></button>
-						
-						<button class="btn btn-default btn-primary menu-button"> My Reading History</button>
-						
-						<button class="btn btn-default btn-primary menu-button"> About</button>
-						 
-						<% if user_signed_in? %>
-							<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,
-								class: 'btn btn-default btn-primary menu-button' %>
-						<% else %>
-							<%= link_to 'Sign in', new_user_session_path, class: 'btn btn-default btn-primary menu-button' %>
-						<% end %>
-
-						
-						<div class="input-append textkanan">
-							<input type="text" class="search-query" placeholder="Search">
+						<div class="navbar">
+						  <div class="navbar-inner">
+						    <ul class="nav ">
+						      <li class="color-log btn btn-small btn-primary"><a href="/mains"> Home</a></li>
+						      <li class="color-log btn btn-small btn-primary"><a href="/reminders"> Reminder</a></li>
+						      <li class="color-log btn btn-small btn-primary"><a href="#"> My Reading History</a></li>
+						      <li class="color log btn btn-small btn-primary"><a href="#"> About</a></li>
+										<% if user_signed_in? %>
+											<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,
+											class: 'btn btn-large btn-primary menu-button' %>
+										<% else %>
+											<%= link_to 'Sign in', new_user_session_path, class: 'btn btn-large btn-primary menu-button' %>
+										<% end %>
+						    </ul>
+						     	<li class="input-append float:right">
+										<input type="text" class="search-query" placeholder="Search">
+									</li>
+						  </div>
+						  		
 						</div>
 
 					</div>
@@ -35,3 +34,23 @@
 	</div>
 
 </div>
+
+
+
+
+
+
+
+
+						<!-- <button class="btn btn-default btn-link menu-button"> <a href="/mains" style="color:white;">Home</a></button>
+
+						<button class="btn btn-default btn-primary menu-button marginbt"> Audio</button>
+						
+						<button class="btn btn-default btn-primary menu-button"> <a href="/reminders" style="color:white;">Reminder</a></button>
+						
+						<button class="btn btn-default btn-primary menu-button"> My Reading History</button>
+						
+						<button class="btn btn-default btn-primary menu-button"> About</button> -->
+						
+						
+						

@@ -1,7 +1,13 @@
-<h1>Editing <%= @reminder.start_ayat %></h1>
-<h1>Editing <%= @reminder.start_at %></h1>
-<h1>Editing <%= @reminder.remind_every %></h1>
-<h1>Editing <%= @reminder.start_before %></h1>
-<%=render 'form' %>
+<div class="row-fluid">
+	<div id="banner">
+		<div class="reminder">
 
-<%= link_to 'cancel', reminds_path %>
+
+			<h1>Edit Reminder</h1>
+
+			<%=render 'form' %>
+
+			<%= link_to 'cancel', reminders_path %>
+		</div>
+	</div>
+</div>

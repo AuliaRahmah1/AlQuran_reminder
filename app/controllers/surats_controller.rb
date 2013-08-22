@@ -34,4 +34,13 @@ end
 		@surat.destroy
 		redirect_to surats_path
 	end
+
+	def ayats
+		@surat = Surat.find(params[:id])
+		@ayats = @surat.ayats
+
+		respond_to do |format|
+			format.js
+		end
+	end
 end

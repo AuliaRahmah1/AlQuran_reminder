@@ -5,10 +5,19 @@ AlQuranReminder::Application.routes.draw do
   
   resources :home
   resources :users
-  resources :surats
+  resources :surats do
+  	member do
+  		get :ayats
+  	end
+  end
   resources :ayats
   resources :reading_histories
-  resources :reminders
+  resources :reminders do
+      collection do
+        get :check
+      end
+  end    
+
   resources :mains
   
 end

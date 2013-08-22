@@ -9,32 +9,35 @@
 <%= form_for @reminder do |f| %>
 	<table>
 		<tr>
-			<td>Start_ayat</td>
+			<td>Surat</td>
 			<td>:</td>
-			<td></td>
-			<td><%= f.text_field :start_ayat %></td>
+			<td>
+				<%= f.collection_select :surat_id, Surat.all, :id, :title %>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Start Ayat</td>
+			<td>:</td>
+			<td>
+				<%= f.collection_select :start_ayat_id, Ayat.all, :id, :message %>
+			</td>
 		</tr>
 
 		<tr>
 			<td>Start_at</td>
 			<td>:</td>
-			<td></td>
-			<td><%= f.text_field :start_at %></td>
+			<td><%= f.datetime_select :start_at, default: DateTime.now %>
+			</td>
 		</tr>
 
 		<tr>
 			<td>Reminder_every</td>
 			<td>:</td>
-			<td></td>
 			<td><%= f.text_field :remind_every %></td>
 		</tr>
 
-		<tr>
-			<td>Reminder_before</td>
-			<td>:</td>
-			<td></td>
-			<td><%= f.text_field :remind_before %></td>
-		</tr>
+		
 		<tr>
 			<td colspan='3'><%= f.submit %>
 		</tr>

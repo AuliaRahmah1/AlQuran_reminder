@@ -1,5 +1,13 @@
-<h1>New Reminder<%= @reminder.start_ayat %></h1>
+<div class="row-fluid">
+	<div id="banner">
+		<div class="reminder">
 
-<%=render 'form' %>
 
-<%= link_to 'cancel', reminders_path %>
+			<h1>New Reminder</h1>
+
+			<%=render 'form' %>
+
+			<%= link_to 'cancel', reminders_path %>
+		</div>
+	</div>
+</div>

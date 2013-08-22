@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130819082320) do
+ActiveRecord::Schema.define(:version => 20130822045005) do
 
   create_table "ayats", :force => true do |t|
     t.integer  "number"
@@ -47,6 +47,9 @@ ActiveRecord::Schema.define(:version => 20130819082320) do
     t.integer  "remind_before"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.integer  "surat_id"
+    t.integer  "user_id"
+    t.boolean  "dismiss"
   end
 
   create_table "surats", :force => true do |t|

@@ -1,0 +1,6 @@
+var surat =$("select#reminder_start_ayat_id").empty();
+<% @ayats.each do |ayat| %>
+	var option = $("<option value='<%= ayat.id%>'><%= ayat.message %></option>");
+	surat.append(option);
+	
+<% end %>
