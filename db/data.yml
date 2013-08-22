@@ -1,0 +1,420 @@
+
+---
+ayats:
+  columns:
+  - id
+  - number
+  - message
+  - created_at
+  - updated_at
+  - surats_id
+  - mp3file
+  - image
+  records: 
+  - - 5
+    - 1
+    - inna a'toina kalkautsar
+    - 2013-08-15 04:54:40.000000000 Z
+    - 2013-08-16 07:04:29.000000000 Z
+    - '1'
+    - 
+    - 108_1__1_.png
+  - - 6
+    - 2
+    - ! ' fasollilirobbika wanhar'
+    - 2013-08-15 04:55:05.000000000 Z
+    - 2013-08-16 07:07:17.000000000 Z
+    - '1'
+    - 
+    - 108_2.png
+  - - 7
+    - 3
+    - innasyaniaka huwal abtarr
+    - 2013-08-15 04:55:36.000000000 Z
+    - 2013-08-16 07:08:57.000000000 Z
+    - '1'
+    - 
+    - 108_3.png
+  - - 9
+    - 4
+    - Qull a'udhu bi-rabbi-n-nas
+    - 2013-08-16 07:49:49.000000000 Z
+    - 2013-08-19 07:18:38.000000000 Z
+    - '6'
+    - annas.ogg
+    - 114_1.png
+  - - 10
+    - 5
+    - Maliki-n-nas
+    - 2013-08-16 07:55:53.000000000 Z
+    - 2013-08-16 08:15:01.000000000 Z
+    - '6'
+    - 
+    - 114_2.png
+  - - 11
+    - 6
+    - ! 'Ilahi-n-nas '
+    - 2013-08-16 07:56:42.000000000 Z
+    - 2013-08-16 08:15:08.000000000 Z
+    - '6'
+    - 
+    - 114_3.png
+  - - 12
+    - 7
+    - min sarri-l-waswasi-l-hanas
+    - 2013-08-16 07:57:18.000000000 Z
+    - 2013-08-16 08:15:16.000000000 Z
+    - '6'
+    - 
+    - 114_4.png
+  - - 13
+    - 8
+    - alladhi yu-waswisu fi suduri-n-nas
+    - 2013-08-19 01:16:32.000000000 Z
+    - 2013-08-19 01:16:32.000000000 Z
+    - '6'
+    - 
+    - 114_5.png
+  - - 14
+    - 9
+    - mina-l-ginnati wan-nas
+    - 2013-08-19 01:17:30.000000000 Z
+    - 2013-08-19 01:17:30.000000000 Z
+    - '6'
+    - 
+    - 114_6.png
+
+---
+juzs:
+  columns:
+  - id
+  - number
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 5
+    - 2013-08-01 04:20:50.000000000 Z
+    - 2013-08-01 04:20:50.000000000 Z
+  - - 2
+    - 2
+    - 2013-08-01 07:41:12.000000000 Z
+    - 2013-08-01 07:41:12.000000000 Z
+
+---
+reading_histories:
+  columns:
+  - id
+  - start_ayat_id
+  - end_ayat_id
+  - start_reading
+  - end_reading
+  - duration
+  - user_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - 2
+    - 2013-08-02 01:52:54.000000000 Z
+    - 
+    - 3600
+    - 1
+    - 2013-08-02 01:54:24.000000000 Z
+    - 2013-08-02 01:54:24.000000000 Z
+
+---
+surats:
+  columns:
+  - id
+  - title
+  - created_at
+  - updated_at
+  - slug
+  - juzs_id
+  - mp3file
+  records: 
+  - - 1
+    - Al Kautsar
+    - 2013-08-01 04:18:07.000000000 Z
+    - 2013-08-19 08:24:57.000000000 Z
+    - al-kautsar
+    - 1
+    - 108_Al_Kautsar.ogg
+  - - 6
+    - An Nas
+    - 2013-08-16 07:17:35.000000000 Z
+    - 2013-08-19 08:28:26.000000000 Z
+    - an-nas
+    - 
+    - annas.ogg
+
+---
+users:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - first_name
+  - last_name
+  - slug
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - confirmation_token
+  - confirmed_at
+  - confirmation_sent_at
+  - unconfirmed_email
+  - failed_attempts
+  - unlock_token
+  - locked_at
+  - authentication_token
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - aulia@sdsd.com
+    - $2a$10$49tN.tvs7peW4Wnv06/GHuSSQYIW.3sVTdWhypD5eWUW0909kZ8wi
+    - aulia
+    - rahmah
+    - aulia-rahmah
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 1JYKBrwnLCgsnhWmtZmW
+    - 
+    - 2013-08-02 01:57:41.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-02 01:57:41.000000000 Z
+    - 2013-08-02 01:57:41.000000000 Z
+  - - 2
+    - asdasd@gmail.com
+    - $2a$10$f729E19Myh43Eal2B3OzpezS3539WJ/S/Nnv4k0DXnFmEidLx1UgW
+    - aulia
+    - rahmah
+    - aulia-rahmah--2
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 3V5qfiUggRytAzLf7A5C
+    - 
+    - 2013-08-14 06:29:35.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-14 06:29:35.000000000 Z
+    - 2013-08-14 06:29:35.000000000 Z
+  - - 3
+    - qwwew@ass.com
+    - $2a$10$A9AGMvS0ORqcgNRyLsdXs.dKOsHo5K1v8h1yx37iP68468FNxmo3C
+    - rini
+    - novi
+    - rini-novi
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 7PCjqqG4J7zh6kFKfRnz
+    - 
+    - 2013-08-15 02:12:07.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-15 02:12:07.000000000 Z
+    - 2013-08-15 02:12:07.000000000 Z
+  - - 4
+    - syifa_maulida@yahoo.com
+    - $2a$10$qrpGAFo2Iv2/0mYLnKgxvuRIvu0vRxwMQ4IZKMKn7fObZEvNa5w6a
+    - syifa
+    - maulida
+    - syifa-maulida
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - SqSfPDjRtKkrynzxVGze
+    - 
+    - 2013-08-16 01:11:21.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-16 01:11:21.000000000 Z
+    - 2013-08-16 01:11:21.000000000 Z
+  - - 5
+    - wiraka@yahoo.com
+    - $2a$10$dhRHbwXpy6yI/OH3zsfrMOqBZtfFlrJ8wBw1RjfYt.HVwjsl8bRjq
+    - wiraka
+    - dluha
+    - wiraka-dluha
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - tetxVATyBgWVJmtm7Vzf
+    - 
+    - 2013-08-16 01:41:05.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-16 01:41:05.000000000 Z
+    - 2013-08-16 01:41:05.000000000 Z
+  - - 10
+    - a@b.com
+    - $2a$10$jpUdO80U6uS.3UGjFBOXqOnc26isJNI0qhLB1yKKLeo0cHEUXE8vi
+    - a
+    - b
+    - a-b
+    - 
+    - 
+    - 
+    - 11
+    - 2013-08-16 03:20:01.000000000 Z
+    - 2013-08-16 03:19:14.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-08-16 02:59:18.000000000 Z
+    - 2013-08-16 02:59:07.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-16 02:59:07.000000000 Z
+    - 2013-08-16 03:20:01.000000000 Z
+  - - 11
+    - agus@sd.com
+    - $2a$10$reHBgdcY7bnbHHRa1Jiv/ecY5sFrSMoZt1zuYTE63/yvSL5DU1tZa
+    - agus
+    - saktiyono
+    - agus-saktiyono
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - wXsA7NHLMoksxi178do2
+    - 
+    - 2013-08-16 03:52:03.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-16 03:52:03.000000000 Z
+    - 2013-08-16 03:52:03.000000000 Z
+  - - 12
+    - adli@ww.com
+    - $2a$10$aiB199F96lH.7BGSLhzIZ.vSppMr0lzYI5AzEa05NZkysSxI2DFa6
+    - adli
+    - anugrah
+    - adli-anugrah
+    - 
+    - 
+    - 
+    - 11
+    - 2013-08-22 02:03:27.000000000 Z
+    - 2013-08-19 08:20:11.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-08-16 04:18:39.000000000 Z
+    - 2013-08-16 04:01:12.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-16 04:01:12.000000000 Z
+    - 2013-08-22 02:03:27.000000000 Z
+  - - 13
+    - angga@gmail.com
+    - $2a$10$96tomvs1rz9u0xtud7BxmeEq2lujaOziOoUmS8i43aT3XSlXZ0uMW
+    - angga
+    - adi
+    - angga-adi
+    - 
+    - 
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - xSARBj6nxquywZ6Lq1q2
+    - 
+    - 2013-08-19 03:31:10.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-19 03:31:10.000000000 Z
+    - 2013-08-19 03:31:10.000000000 Z
+  - - 14
+    - adi@qq.com
+    - $2a$10$zwhAGRFlxICUkld0hsaZ/.wEc4GnS/QPJRY430/qaTYSshVHravfK
+    - adi
+    - nugraha
+    - adi-nugraha
+    - 
+    - 
+    - 
+    - 1
+    - 2013-08-19 03:34:56.000000000 Z
+    - 2013-08-19 03:34:56.000000000 Z
+    - 127.0.0.1
+    - 127.0.0.1
+    - 
+    - 2013-08-19 03:34:56.000000000 Z
+    - 2013-08-19 03:34:48.000000000 Z
+    - 
+    - 0
+    - 
+    - 
+    - 
+    - 2013-08-19 03:34:48.000000000 Z
+    - 2013-08-19 03:34:56.000000000 Z
