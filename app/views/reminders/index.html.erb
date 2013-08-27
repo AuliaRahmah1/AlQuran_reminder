@@ -10,25 +10,27 @@
 					</h2>
 				<% else %>
 
-					<h2>Your reminder Lists</h2>
-					<ul>
+					<center><h2>Your reminder Lists</h2></center>
+					<ol style='margin-bootom:50px;'>
 						<% @reminders.each do |reminder| %>
 						<li>
 							<span>Reading surat <%= link_to reminder.surat.title, surat_path(reminder.surat) %></span>
 							<span>ayat <%= link_to reminder.ayat.message, ayat_path(reminder.ayat) %></span>
 							<span>at <%= reminder.start_at.strftime('%d-%B-%Y %H:%M %p') %></span>
 
-							<span>
+							<span></br>
 								<%= link_to 'Edit', edit_reminder_path(reminder), class: 'btn btn-warning' %>
 
 								<%= link_to 'Remove', reminder_path(reminder), class: 'btn btn-danger', method: :delete %>
 							</span>
 						</li>
 						<% end %>					
-					</ul>
-					<%= link_to 'New Reminder', new_reminder_path, class: 'btn btn-primary' %>
-				
+					</ol></br>
+					<center>
+					<%= link_to 'New Reminder', new_reminder_path, class: 'btn btn-primary', style: 'text-align: center' %>
+					</center>
 				<% end %>
+				
 
 					
 		</div>

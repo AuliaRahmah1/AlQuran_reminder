@@ -5,4 +5,6 @@
  *= require global
  *= require banner
  *= require text
+ *= require about
+ *= require search
  */

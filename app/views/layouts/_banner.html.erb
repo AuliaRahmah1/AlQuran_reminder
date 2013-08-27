@@ -1,32 +1,32 @@
-<div id="banner">
-	<div class='row-fluid'>
-		<div class='span12'>
-			<div id='banner'>
-				
-				<%= image_tag '/assets/yu.png' %>
-
-					<div class="topbody">
-						<div class="navbar">
-						  <div class="navbar-inner">
-						    <ul class="nav ">
-						      <li class="color-log btn btn-small btn-primary"><a href="/mains"> Home</a></li>
-						      <li class="color-log btn btn-small btn-primary"><a href="/reminders"> Reminder</a></li>
-						      <li class="color-log btn btn-small btn-primary"><a href="#"> My Reading History</a></li>
-						      <li class="color log btn btn-small btn-primary"><a href="#"> About</a></li>
-										<% if user_signed_in? %>
-											<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,
-											class: 'btn btn-large btn-primary menu-button' %>
-										<% else %>
-											<%= link_to 'Sign in', new_user_session_path, class: 'btn btn-large btn-primary menu-button' %>
-										<% end %>
-						    </ul>
-						     	<li class="input-append float:right">
-										<input type="text" class="search-query" placeholder="Search" style="margin-top: 10px;">
-									</li>
-						  </div>	  		
-						</div>
+<div class='row-fluid'>
+	<div class='span12'>
+		<div id='banner'>
+			<%= image_tag '/assets/yu.png' %>
+				<div class="topbody">
+					<div class="navbar">
+					  <div class="navbar-inner">
+					    <ul class="nav ">
+					      <li class="color-log btn btn-small btn-primary"><a href="/mains"> Home</a></li>
+					      <li class="color-log btn btn-small btn-primary"><a href="/reminders"> Reminder</a></li>
+					      <li class="color-log btn btn-small btn-primary"><a href="/reading_histories"> My Reading History</a></li>
+					      <li class="color log btn btn-small btn-primary"><a href="/about"> About</a></li>
+									<% if user_signed_in? %>
+										<%= link_to 'Sign Out', destroy_user_session_path, method: :delete,
+										class: 'btn btn-large btn-primary menu-button' %>
+									<% else %>
+										<%= link_to 'Sign in', new_user_session_path, class: 'btn btn-large btn-primary menu-button' %>
+									<% end %>
+					    </ul>
+					     	<li class="input-append float:right">
+					     		<%= form_tag search_index_path, method: :get, id: "cari" do %>
+					     			<%= text_field_tag :q, params[:q], placeholder: 'Search', style: 'margin-top:10px;', class: 'search-query' %>
+					     		<% end %>
+								</li>
+					  </div>	  		
 					</div>
 				</div>
 			</div>
-	</div>
+		</div>
 </div>
+<br><br>
+

@@ -11,16 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130822045005) do
+ActiveRecord::Schema.define(:version => 20130827075708) do
 
   create_table "ayats", :force => true do |t|
     t.integer  "number"
     t.text     "message"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "surats_id"
     t.string   "mp3file"
     t.string   "image"
+    t.string   "insert_ayat"
   end
 
   create_table "juzs", :force => true do |t|

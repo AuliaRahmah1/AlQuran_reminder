@@ -1,4 +1,8 @@
 AlQuranReminder::Application.routes.draw do
+  get "search/index"
+
+  get "about/show"
+
   devise_for :users
   
   root to: 'home#index'
@@ -19,5 +23,7 @@ AlQuranReminder::Application.routes.draw do
   end    
 
   resources :mains
+  resources :about
   
+
 end

@@ -1,0 +1,20 @@
+<div class='row-fluid margin'>
+	<div class='form-search'>
+		<% if @surats.present? %>
+			<h2>Ditemukan <%= @surats.count %> Surat</h2>
+
+			<% @surats.each do |surat| %>
+				<p><%= link_to surat.title, surat_path(surat) %></p>
+			<% end -%>
+		<% end -%>
+
+		<% if @ayats.present? %>
+			<h2>Ditemukan <%= @ayats.count %> Ayat</h2>
+
+			<% @ayats.each do |ayat| %>
+				<p><%= link_to ayat.message, ayat_path(ayat) %></p>
+			<% end -%>
+		<% end -%>
+
+	</div>
+</div>

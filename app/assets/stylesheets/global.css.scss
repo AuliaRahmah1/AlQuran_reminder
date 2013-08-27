@@ -1,6 +1,5 @@
 body{
 	background-image:image-url("/assets/mifa.jpg");
-
 }
 
 .left-side {
@@ -21,10 +20,13 @@ body{
 .surah-container {
 	overflow-x: hidden;
 	overflow-y: scroll;
-	background-color: #F5FFFA;
+	background-color: #C0C0C0;
+	margin-left: 2px;
+	border: 2px blue solid;
+	border-radius: 2px;
 	ul {
-		// reset default margin
-		margin: 10px; 
+		// reset default
+		
 		li {
 			// menghilangkan titik di sebelah kiri
 			list-style-type: none;
@@ -38,9 +40,18 @@ body{
 }
 
 #reminders-container{
-	background-color: #fff;
-	margin: 30px 0px;
+	background-color: #C0C0C0;
+	border-radius: 2px;
+	border:2px solid blue;
+	margin: 10px 2px 40px 2px;
 	padding: 20px;
+}
+
+.body-container{
+	background-color: #fff;
+	border:2px solid blue; 
+	margin-top:22px;
+	height: 600px;
 }
 
 .picslide{
