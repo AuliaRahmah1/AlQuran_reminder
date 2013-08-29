@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130827075708) do
+ActiveRecord::Schema.define(:version => 20130829042550) do
 
   create_table "ayats", :force => true do |t|
     t.integer  "number"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(:version => 20130827075708) do
     t.string   "mp3file"
     t.string   "image"
     t.string   "insert_ayat"
+    t.boolean  "first_ayat"
+    t.boolean  "last_ayat"
   end
 
   create_table "juzs", :force => true do |t|

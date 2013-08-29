@@ -4,7 +4,7 @@ $(document).ready(function() {
     var q = document.forms["cari"]["q"].value;
     if (q==null || q=="")
     {
-	  alert("gk boleh kosong");
+	  alert("Maaf, tidak boleh kosong");
 	  	return false;
 	  }
 	  else{

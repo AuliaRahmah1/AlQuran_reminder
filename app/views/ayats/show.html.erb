@@ -1,14 +1,28 @@
-<h1><%= @ayat.number %></h1>
-<h1><%= @ayat.insert_ayat %></h1>
+<div class='row-fluid'>
+	<div class='pageayat'>
+			<h1><%= @ayat.number %></h1>
+			<h1><%= @ayat.insert_ayat %></h1>
 
-<p>
- <%= @ayat.message %>
-</p>
-<p>
- <%= @ayat.mp3file_url %>
-</p>
+			<p>
+			 <%= @ayat.message %>
+			</p>
+			<p>
+			 <%= @ayat.mp3file_url %>
+			</p>
 
-<p>
- <%= image_tag @ayat.image_url %>
-</p>
-<%= link_to 'Edit', edit_ayat_path(@ayat) %>
+			<p>
+				<% if @ayat.prev %>
+					<%= link_to 'Prev', ayat_path(@ayat.prev) %> 
+				<% end %>
+
+			 	<%= image_tag @ayat.image_url %>
+
+			 	<% if @ayat.next %>
+			 		<%= link_to 'Next', ayat_path(@ayat.next) %> 
+			 	<% end %>
+
+			</p>
+
+			<%= link_to 'Edit', edit_ayat_path(@ayat) %>
+	</div>
+</div>

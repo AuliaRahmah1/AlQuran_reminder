@@ -1,14 +1,18 @@
-<h1>List All Ayats</h1>
-<ul>
-	<% @ayats.each do |ayat| %>
-	 <li>
-	 	<%= link_to ayat.number, ayat_path(ayat) %>
+<div class='row-fluid'>		
+	<div class='pageayat'>
+		<h1>List All Ayats</h1>
+		<ul>
+			<% @ayats.each do |ayat| %>
+			 <li>
+			 	<%= link_to ayat.number, ayat_path(ayat) %>
 
-	 	<%= link_to 'Edit', edit_ayat_path(ayat) %> |
-	 	<%= link_to 'Delete', ayat_path(ayat), method: :delete %>
-	 </li>
-	 <% end %>
-</ul>
+			 	<%= link_to 'Edit', edit_ayat_path(ayat) %> |
+			 	<%= link_to 'Delete', ayat_path(ayat), method: :delete %>
+			 </li>
+			 <% end %>
+		</ul>
 
-</br>
-<%= link_to 'New Ayat', new_ayat_path %>
+		</br>
+		<%= link_to 'New Ayat', new_ayat_path %>
+	</div>
+</div>

@@ -1,7 +1,6 @@
 <div class="row-fluid">
 	<div id="banner">
 		<div class="reminder">
-
 				<% if @reminders.blank? %>
 					<h2>
 						You don't have any reminder, do you want to create
@@ -14,9 +13,9 @@
 					<ol style='margin-bootom:50px;'>
 						<% @reminders.each do |reminder| %>
 						<li>
-							<span>Reading surat <%= link_to reminder.surat.title, surat_path(reminder.surat) %></span>
-							<span>ayat <%= link_to reminder.ayat.message, ayat_path(reminder.ayat) %></span>
-							<span>at <%= reminder.start_at.strftime('%d-%B-%Y %H:%M %p') %></span>
+							<span> Reading surat <%= link_to reminder.surat.title, surat_path(reminder.surat) %></span>
+							<span> ayat <%= link_to reminder.ayat.message, ayat_path(reminder.ayat) %></span>
+							<span> at <%= reminder.start_at.strftime('%d-%B-%Y %H:%M %p') %></span>
 
 							<span></br>
 								<%= link_to 'Edit', edit_reminder_path(reminder), class: 'btn btn-warning' %>
@@ -30,10 +29,6 @@
 					<%= link_to 'New Reminder', new_reminder_path, class: 'btn btn-primary', style: 'text-align: center' %>
 					</center>
 				<% end %>
-				
-
-					
 		</div>
-
 	</div>
 </div>

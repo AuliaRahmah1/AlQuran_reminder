@@ -1,22 +1,21 @@
-<div class="row-fluid">
-	<div class="span-8">
+<div class='row-fluid'>
+	<div class='span-8'>
+		<div class='pageayat'>	
+			<h1>List All Surats</h1>
+			<ul>
+				<% @surats.each do |surat| %>
+				 <li>
+				 	<%= link_to surat.title, surat_path(surat) %>
+					 <br>
+					 	<%= link_to 'Edit'	,edit_surat_path(surat),	class: 'btn btn-primary' %> |
+					 	<%= link_to 'Delete', surat_path(surat),method: :delete,class: 'btn btn-danger' %> 
+					 </br>
+				 </li>
+				<% end %>
+			</ul>
 
-
-<h1>List All Surats</h1>
-<ul>
-	<% @surats.each do |surat| %>
-	 <li>
-	 	<%= link_to surat.title, surat_path(surat) %>
-	 <br>
-	 	<%= link_to 'Edit'	,edit_surat_path(surat),	class: 'btn btn-primary' %> |
-	 	<%= link_to 'Delete', surat_path(surat),method: :delete,class: 'btn btn-danger' %> 
-	 </br>
-	 </li>
-	<% end %>
-</ul>
-
-<br/>
-
-<%= link_to 'New Surat', new_surat_path %>
+			<br/>
+			<%= link_to 'New Surat', new_surat_path %>
+		</div>
 	</div>
 </div>
