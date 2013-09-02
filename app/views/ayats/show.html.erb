@@ -24,5 +24,22 @@
 			</p>
 
 			<%= link_to 'Edit', edit_ayat_path(@ayat) %>
+			<div>
+				<% if session[:user_reading] %>
+					<%= link_to 'Stop Reading', 
+						reading_history_path(session[:reading_history_id], { reading_history: { end_ayat_id: @ayat.id}}),
+						method: :put, class: 'color-log btn btn-small btn-primary'
+					%>
+				<% end -%>
+			</div>
+			
+			
+			</div>
+
+
+			</div>
 	</div>
 </div>
+
+
+

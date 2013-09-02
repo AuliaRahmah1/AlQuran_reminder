@@ -3,16 +3,21 @@
 		<h1>List All Reading_histories</h1>
 		<ul>
 			<% @reading_histories.each do |reading_history| %>
-			 <li>
-			 	<%= link_to reading_history.start_ayat, reading_history_path(reading_history) %>
-			 	<%= link_to reading_history.end_ayat, reading_history_path(reading_history) %>
-			 </li>
-			 <% end %>
+				<li>
+					<% if reading_history.user.present? %>
+						<%= reading_history.user.name %> Start reading
+						<%= reading_history.start_ayat.surat.title %> ayat <%= reading_history.start_ayat.number %> 
+						at <%= reading_history.start_reading %>
+						and finish reading <%= reading_history.end_ayat.surat.title %>
+						ayat <%= reading_history.end_ayat.number %>
+						at <%= reading_history.end_reading %>
+					<% end %>
+				</li>
+			<% end %>
 		</ul>
 		</br>
 	</div>
 </div>
-
 
 
 

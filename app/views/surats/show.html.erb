@@ -14,9 +14,16 @@
 				</div>
 			<% end %>
 			<center><h1><%= @surat.title %></h1></center>
-			<div class='color-log' style='margin-left: 20px;'>
-				<%= link_to 'Start Reading', ayat_path(@surat.ayats.first), class: 'btn btn-small btn-primary' %>
+
+			<% if session[:user_reading].blank? %>
+			<div class='color-log' style='margin-left: 20px;'>				
+				<%= link_to 'Start Reading', 
+						reading_histories_path(reading_history: { start_ayat_id: @surat.ayats.first} ), method: :post, 
+						class: 'btn btn-small btn-primary' %>
 			</div>
+			<% else %>
+				<p>You are reading <%= ReadingHistory.find(session[:reading_history]).start_ayat.surat.name %></p>
+ 			<% end -%>
 						<% @ayats.each do |ayat| %>
 						<%= image_tag ayat.image_url %>	
 					<div class='margintext' >
@@ -28,5 +35,6 @@
 		</div>
 	</div>
 </div>
+
 
 
