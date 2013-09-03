@@ -1,16 +1,19 @@
 <div class='row-fluid'>	
 	<div class='pageayat'>	
-		<h1>List All Reading_histories</h1>
+		<center><h1>List All Reading_histories</h1></center>
 		<ul>
 			<% @reading_histories.each do |reading_history| %>
 				<li>
 					<% if reading_history.user.present? %>
 						<%= reading_history.user.name %> Start reading
-						<%= reading_history.start_ayat.surat.title %> ayat <%= reading_history.start_ayat.number %> 
-						at <%= reading_history.start_reading %>
-						and finish reading <%= reading_history.end_ayat.surat.title %>
-						ayat <%= reading_history.end_ayat.number %>
-						at <%= reading_history.end_reading %>
+						<%= reading_history.start_ayat.surat.title %> ayat 
+						<%= reading_history.start_ayat.number %> at 
+						<%= reading_history.start_reading %> and finish reading 
+						<%= reading_history.end_ayat.surat.title %> ayat 
+						<%= reading_history.end_ayat.number %> at 
+						<%= reading_history.end_reading %>
+					</br>
+				----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 					<% end %>
 				</li>
 			<% end %>

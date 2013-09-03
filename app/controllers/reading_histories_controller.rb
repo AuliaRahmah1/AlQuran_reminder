@@ -1,7 +1,7 @@
 class ReadingHistoriesController < ApplicationController
 	before_filter :authenticate_user!
 	def index
-		@reading_histories = ReadingHistory.all
+		@reading_histories = current_user.reading_histories
 	end
 
 	def show

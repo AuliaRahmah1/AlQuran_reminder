@@ -27,14 +27,14 @@
 		<tr>
 			<td>Start_at</td>
 			<td>:</td>
-			<td><%= f.datetime_select :start_at, default: DateTime.now %>
+			<td><%= f.time_select :start_at, default: DateTime.now %>
 			</td>
 		</tr>
 
 		<tr>
 			<td>Reminder_every</td>
 			<td>:</td>
-			<td><%= f.text_field :remind_every %></td>
+			<td><%= f.text_field :remind_every %> days</td>
 		</tr>
 
 		

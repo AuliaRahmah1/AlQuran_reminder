@@ -4,4 +4,6 @@ class MainsController < ApplicationController
 		@surats = Surat.all
 	end
 
+	
+
 end
