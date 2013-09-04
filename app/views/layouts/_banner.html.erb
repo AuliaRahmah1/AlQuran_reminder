@@ -16,12 +16,15 @@
 									<% else %>
 										<%= link_to 'Sign in', new_user_session_path, class: 'btn btn-large btn-primary menu-button' %>
 									<% end %>
+									
 					    </ul>
+
 					     	<li class="input-append float:right">
 					     			<%= form_tag search_index_path, method: :get, id: "cari" do %>
 					     			<%= text_field_tag :q, params[:q], placeholder: 'Search', style: 'margin-top:10px;', class: 'search-query' %>
 					     			<% end %>
 								</li>
+					  
 					  </div>	  		
 					</div>
 				</div>
@@ -29,4 +32,5 @@
 	</div>
 </div>
 <br><br>
+
 

@@ -45,12 +45,24 @@
     </div>
  <% end %>
 
-<% if user_signed_in? %>
+<% if user_signed_in? %> 
   <%= render "login_links", resource: current_user, 
       resource_name: current_user.class.name.downcase, devise_mapping: Devise.mappings[:user] %>
 <% else %>
   <%= render "login_links", 
       resource: User.new, resource_name: 'user', devise_mapping: Devise.mappings[:user] %>
+
+
 <% end %>
 
 
+
+              <button onclick="myFunction()">ok</button>
+
+              <script>
+              function myFunction()
+              {
+
+              setInterval(function(){alert("you still have one reminder")},5000);
+              }
+            </script>

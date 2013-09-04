@@ -22,8 +22,10 @@
 			 	<% end %>
 
 			</p>
-
-			<%= link_to 'Edit', edit_ayat_path(@ayat) %>
+			
+			<% if user_signed_in? && current_user.is_admin? %>
+				<%= link_to 'Edit', edit_ayat_path(@ayat) %>
+			<% end -%>
 			<div>
 				<% if session[:user_reading] %>
 					<%= link_to 'Stop Reading', 

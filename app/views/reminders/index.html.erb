@@ -5,7 +5,7 @@
 					<h2>
 						You don't have any reminder, do you want to create
 						<%= link_to 'New Reminder ?', new_reminder_path, class: 'btn btn-primary' %>
-						
+						<%= audio_tag '/assets/alert.ogg', autoplay: true %>
 					</h2>
 				<% else %>
 
@@ -34,6 +34,8 @@
 						</li>
 						<% end %>					
 					</ol></br>
+
+
 					<center>
 						<%= link_to 'New Reminder', new_reminder_path, class: 'btn btn-primary', style: 'text-align: center' %>
 					</center>
@@ -41,3 +43,7 @@
 		</div>
 	</div>
 </div>
+
+
+
+

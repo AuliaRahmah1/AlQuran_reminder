@@ -20,6 +20,9 @@
 				<%= link_to 'Start Reading', 
 						reading_histories_path(reading_history: { start_ayat_id: @surat.ayats.first} ), method: :post, 
 						class: 'btn btn-small btn-primary' %>
+						
+						
+
 			</div>
 			<% else %>
 				<p>You are reading <%= ReadingHistory.find(session[:reading_history]).start_ayat.surat.name %></p>
@@ -32,6 +35,7 @@
 					</div>
 					<div class='clearer'></div>
 				<% end %>
+				
 		</div>
 	</div>
 </div>
