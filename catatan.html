@@ -40,3 +40,6 @@ var t=d.toLocaleTimeString();
 setInterval(function(){alert("Hello")},5000);
 }
 </script>
+
+<% end -%>
+<% if user_signed_in? && current_user.is_admin? %>

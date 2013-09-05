@@ -2,10 +2,10 @@
 	<div id="banner">
 		<div class="reminder">
 				<% if @reminders.blank? %>
-					<h2>
+					<h2 style='color:blue;'>
 						You don't have any reminder, do you want to create
-						<%= link_to 'New Reminder ?', new_reminder_path, class: 'btn btn-primary' %>
-						<%= audio_tag '/assets/alert.ogg', autoplay: true %>
+						<%= link_to 'New Reminder ?', new_reminder_path, class: 'btn btn-primary'%>
+					
 					</h2>
 				<% else %>
 
@@ -37,7 +37,7 @@
 
 
 					<center>
-						<%= link_to 'New Reminder', new_reminder_path, class: 'btn btn-primary', style: 'text-align: center' %>
+						<%= link_to 'New Reminder', new_reminder_path, class: 'btn btn-primary', style: 'text-align: center' %>	<%= audio_tag '/assets/alert.ogg', autoplay: true %>
 					</center>
 				<% end %>
 		</div>
