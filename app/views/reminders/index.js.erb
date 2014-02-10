@@ -3,7 +3,8 @@ window.reminders=[];
 	window.reminders.push({ id: <%= reminder.id %>, start_at: new Date('<%= reminder.start_at %>'),
 		show: <%= reminder.dismiss.presence || false %>,
 		surat: "<%= reminder.surat.title %>",
-		ayat: "<%= reminder.ayat.message %>"
+		ayat: "<%= reminder.ayat.message %>",
+		email: "<%= reminder.user.email %>"
 });
 <% end %>
 
@@ -20,6 +21,15 @@ setInterval(function(){
 				element.append($("<a href='/reminders/" + e.id + "?  reminder[dismiss]= true' data-method='delete'> Dismiss</a>"));
 				
 				$("#reminders-container").append(element);
+
+				$.ajax({
+				  type: "POST",
+				  url: "<%= reminder_email_path %>",
+				  data: { email: e.email, surat: e.surat, ayat: e.ayat, link: '/reminders/" + e.id + "?  reminder[dismiss]= true' }
+				})
+				  .done(function( msg ) {
+				    alert( "Email Send: " + msg );
+				  });
 			
 			}
 		}

@@ -17,10 +17,10 @@
 						<% @reminders.each do |reminder| %>
 						<li>
 							<span>
-							 Reading surat <%= link_to reminder.surat.title, surat_path(reminder.surat) %>
+							 Reading surat <%= link_to reminder.surat.title, surat_path(reminder.surat) if reminder.surat %>
 							</span>
 							<span> 
-								ayat <%= link_to reminder.ayat.message, ayat_path(reminder.ayat) %>
+								ayat <%= link_to reminder.ayat.message, ayat_path(reminder.ayat) if reminder.ayat %>
 							</span>
 							<span> 
 								at <%= reminder.start_at.strftime('%d-%B-%Y %H:%M %p') %>
