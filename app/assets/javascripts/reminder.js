@@ -6,15 +6,6 @@ $(document).ready(function(){
 	$.get('/reminders/check', function(data){
 		if(data) {
 			$.get('/reminders.js');
-	
-	
 		}
 	});
 });
-
-
-
-
-
-
- 
