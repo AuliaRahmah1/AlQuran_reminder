@@ -25,13 +25,3 @@ test:
   pool: 5
   timeout: 5000
   socket: /var/run/mysqld/mysqld.sock
-
-production:
-  adapter: mysql2
-  database: AlQuran_reminder_pro
-  host: localhost
-  username: root
-  password: toor
-  pool: 5
-  timeout: 5000
-  socket: /var/run/mysqld/mysqld.sock

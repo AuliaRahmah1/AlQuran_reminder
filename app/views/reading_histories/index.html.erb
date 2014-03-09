@@ -6,11 +6,11 @@
 				<li>
 					<% if reading_history.user.present? %>
 						<%= reading_history.user.name %> Start reading
-						<%= reading_history.start_ayat.surat.title %> ayat 
-						<%= reading_history.start_ayat.number %> at 
+						<%= reading_history.start_ayat.surat.title %> ayat
+						<%= reading_history.start_ayat.number if reading_history.start_ayat  %> at 
 						<%= reading_history.start_reading %> and finish reading 
-						<%= reading_history.end_ayat.surat.title %> ayat 
-						<%= reading_history.end_ayat.number %> at 
+						<%= reading_history.end_ayat.surat.title if reading_history.end_ayat %> ayat 
+						<%= reading_history.end_ayat.number if reading_history.end_ayat %> at 
 						<%= reading_history.end_reading %>
 					</br>
 				----------------------------------------------------------------------------------------------------------------------------------------------------------------------------

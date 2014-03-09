@@ -7,7 +7,7 @@
 				<ul>
 					<li><%= link_to 'All Chapters', mains_path %></li>
 					<% @surats.each do |surat| %>
-						<li><%= link_to surat.title, surat_path(surat) %></li>
+					<li><%= link_to surat.title, surat_path(surat) %></li>
 					<% end %>
 				</ul>
 			</div>

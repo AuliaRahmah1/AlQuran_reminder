@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20130903022901) do
     t.datetime "start_reading"
     t.datetime "end_reading"
     t.integer  "duration"
-    t.integer  "user_id",       :null => false
+    t.integer  "user_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

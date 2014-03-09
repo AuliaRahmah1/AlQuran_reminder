@@ -9,6 +9,7 @@
 	margin-right: 80px;
 	float:right;
 	font-size: 80px;
+	color:#1E90FF;
 }
 .kiri{
 	float:left;
@@ -40,20 +41,27 @@
 }
 
 .color-log{
+	color: #1E90FF;
+	font-style: bold;
+	margin-right: 4px;
+	border-radius: 10px;
+}
+.color-nav{
 	color: white;
 	font-style: bold;
 	margin-right: 4px;
-
+	border-radius: 10px
 }
 
 .marginbt{
 	margin-left: 40px;
 }
 .body{
-	border: 2px blue solid;
+	border: 1px grey solid;
 	border-radius: 4px;
 	background-color: #C0C0C0;
 	margin: 30px 0px 0px 0px;
+	margin-right: 10px;
 
 }
 
@@ -72,7 +80,7 @@
 	img{
 		border-radius: 20px;
 		border: black solid;
-		width: 200px;
+		width: 240px;
 		height: 500px;	
 	}
 }
