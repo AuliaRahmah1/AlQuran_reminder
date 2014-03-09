@@ -43,4 +43,14 @@ class RemindersController < ApplicationController
 	def check
 		render text: current_user.present?
 	end
+
+	def email
+		email = params[:email]
+		data_ayat = params[:ayat]
+		data_surat = params[:surat]
+		data_link = params[:link]
+		reminder = {ayat: data_ayat, surat: data_surat, link: data_link}
+		ReminderMailer.reminder_surat(reminder,email).deliver 
+		render nothing: true
+	end
 end

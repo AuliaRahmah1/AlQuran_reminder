@@ -8,10 +8,9 @@ development:
   database: AlQuran_reminder_dev
   host: localhost
   username: root
-  password: toor
+  password: 
   pool: 5
   timeout: 5000
-  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,10 +20,9 @@ test:
   database: AlQuran_reminder_test
   host: localhost
   username: root
-  password: toor
+  password: 
   pool: 5
   timeout: 5000
-  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: postgresql

@@ -25,5 +25,6 @@ AlQuranReminder::Application.routes.draw do
   resources :mains
   resources :about
   
+  post 'reminder/email', to: 'reminders#email'  
 
 end
