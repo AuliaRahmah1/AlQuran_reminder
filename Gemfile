@@ -43,7 +43,7 @@ group :development do
   gem 'mailcatcher' 
   gem 'pry-rails'
   gem 'debugger' 
-  gem 'mysql'
+  gem 'mysql2'
 end
 
 group :production do
