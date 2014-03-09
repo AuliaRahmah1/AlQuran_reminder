@@ -3,7 +3,7 @@ function myFunction() {
 		window.reminders.forEach(function(x)){
 			if(x.show === false){
 				if(x.remind_every < new Date()){
-					x.show = true
+					x.show = true;
 				}
 			}
 		}
